@@ -8,9 +8,14 @@ class Workchain {
 }
 
 class Job {
-  JobType type = JobType.brake;
-  int time = 10;
-  String description = "Default";
+  JobType type;
+  int time; //= 10;
+  String description; // = "Default";
+
+  Job(
+      {this.type = JobType.brake,
+      this.time = 10,
+      this.description = "Default"});
 
   IconData getIcon() {
     switch (type) {
